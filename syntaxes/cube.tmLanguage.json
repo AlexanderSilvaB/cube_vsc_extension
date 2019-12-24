@@ -1,0 +1,90 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "cube",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#constants"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+				"name": "keyword.control.cube",
+				"match": "\\b(?i)(IF|ELSE|DO|FOR|WHILE|RETURN|AS|AND|BREAK|CONTINUE|IMPORT|OR)\\b"
+				},
+				{
+				"name": "keyword.other.cube",
+				"match": "\\b(?i)(LET|WITH|SUPER|THIS)\\b"
+				}
+			]
+			},
+		"comments": {
+			"patterns": [
+				{
+				"name": "comment.line.double-dash.cube",
+				"begin": "//",
+				"end": "\n"
+
+				},
+				{
+				"name":"comment.block.cube",
+				"begin": "\/[*]",
+				"end": "[*](\/)"
+				}
+			]
+		},
+		"strings":{
+			"patterns": [
+				{
+				"name":"string.quoted.single.cube",
+				"begin": "'",
+				"end": "'"
+				},
+				{
+				"name":"string.quoted.double.cube",
+				"begin": "\"",
+				"end": "\""
+				}
+			]
+		},
+		"variables":{
+			"patterns": [
+				{
+				"name": "variable.language.cube"	,
+				"match": "\\b(?i)(VAR|VOID|BOOL|NUM|STR|BYTES)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+				"name": "constant.character",
+				"match": "(@)"
+				},
+				{
+				"name": "constant.language",
+				"match": "\\b(?i)(NONE|INF|NAN|TRUE|FALSE|CLASS|FUNC|NAMESPACE|NATIVE)\\b"
+				},
+				{
+				"name": "constant.numeric",
+				"match": "[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?"
+				}
+			]
+		}
+
+	},
+	"scopeName": "source.cube"
+}

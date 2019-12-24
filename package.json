@@ -1,0 +1,26 @@
+{
+    "name": "cube-vsc-extension",
+    "displayName": "cube_vsc_extension",
+    "description": "A VSC extension to support Cube",
+    "publisher": "0",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.35.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cube",
+            "aliases": ["cube", "cube"],
+            "extensions": [".cube"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cube",
+            "scopeName": "source.cube",
+            "path": "./syntaxes/cube.tmLanguage.json"
+        }]
+    }
+}
