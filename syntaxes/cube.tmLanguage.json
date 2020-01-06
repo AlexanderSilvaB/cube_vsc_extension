@@ -23,11 +23,11 @@
 			"patterns": [
 				{
 				"name": "keyword.control.cube",
-				"match": "\\b(?i)(IF|ELSE|DO|FOR|WHILE|RETURN|AS|AND|BREAK|CONTINUE|IMPORT|OR)\\b"
+				"match": "\\b(if|else|do|for|while|return|as|and|break|continue|import|or|is|in|not|switch|case|default|async|await|abort|try|catch)\\b"
 				},
 				{
 				"name": "keyword.other.cube",
-				"match": "\\b(?i)(LET|WITH|SUPER|THIS)\\b"
+				"match": "\\b(let|with|super|this)\\b"
 				}
 			]
 			},
@@ -64,7 +64,7 @@
 			"patterns": [
 				{
 				"name": "variable.language.cube"	,
-				"match": "\\b(?i)(VAR|VOID|BOOL|NUM|STR|BYTES)\\b"
+				"match": "\\b(var|void|bool|num|str|bytes|list|dict)\\b"
 				}
 			]
 		},
@@ -76,7 +76,7 @@
 				},
 				{
 				"name": "constant.language",
-				"match": "\\b(?i)(NONE|INF|NAN|TRUE|FALSE|CLASS|FUNC|NAMESPACE|NATIVE)\\b"
+				"match": "\\b(none|inf|nan|true|false|class|func|native|static)\\b"
 				},
 				{
 				"name": "constant.numeric",
