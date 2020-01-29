@@ -22,5 +22,6 @@
             "scopeName": "source.cube",
             "path": "./syntaxes/cube.tmLanguage.json"
         }]
+        
     }
 }

@@ -23,11 +23,11 @@
 			"patterns": [
 				{
 				"name": "keyword.control.cube",
-				"match": "\\b(if|else|do|for|while|return|as|and|break|continue|import|or|is|in|not|switch|case|default|async|await|abort|try|catch)\\b"
+				"match": "\\b(if|else|do|for|while|return|as|and|break|continue|import|require|or|is|in|not|switch|case|default|async|await|abort|try|catch|throw)\\b"
 				},
 				{
 				"name": "keyword.other.cube",
-				"match": "\\b(let|with|super|this)\\b"
+				"match": "\\b(let|with|super|this|args)\\b"
 				}
 			]
 			},
@@ -37,7 +37,11 @@
 				"name": "comment.line.double-dash.cube",
 				"begin": "//",
 				"end": "\n"
-
+				},
+				{
+				"name": "comment.line.shabang.cube",
+				"begin": "#!",
+				"end": "\n"
 				},
 				{
 				"name":"comment.block.cube",
@@ -64,7 +68,7 @@
 			"patterns": [
 				{
 				"name": "variable.language.cube"	,
-				"match": "\\b(var|void|bool|num|str|bytes|list|dict)\\b"
+				"match": "\\b(global|var|void|bool|num|int|str|bytes|list|dict)\\b"
 				}
 			]
 		},

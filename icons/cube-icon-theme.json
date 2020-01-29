@@ -1,0 +1,19 @@
+{
+	"iconDefinitions": {
+		"_file_dark": {
+			"iconPath": "./images/cube-dark.svg"
+		},
+		"_file_light": {
+			"iconPath": "./images/cube-light.svg"
+		}
+	},
+
+	"languageIds": {
+        "cube" : "_file_dark"
+    },
+	"light": {
+		"languageIds": {
+			"cube" : "_file_light"
+		}
+	}
+}
