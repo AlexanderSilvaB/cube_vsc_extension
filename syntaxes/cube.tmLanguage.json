@@ -80,7 +80,7 @@
 				},
 				{
 				"name": "constant.language",
-				"match": "\\b(none|inf|nan|true|false|class|func|native|static|enum)\\b"
+				"match": "\\b(null|inf|nan|true|false|class|func|native|static|enum)\\b"
 				},
 				{
 				"name": "constant.numeric",
