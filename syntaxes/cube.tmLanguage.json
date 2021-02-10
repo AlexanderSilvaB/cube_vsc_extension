@@ -16,79 +16,102 @@
 		},
 		{
 			"include": "#constants"
+		},
+		{
+			"include": "#metas"
+		},
+		{
+			"include": "#markups"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [
 				{
-				"name": "keyword.control.cube",
-				"match": "\\b(if|else|do|for|while|return|as|and|break|continue|import|require|or|is|in|not|switch|case|default|async|await|abort|try|catch|throw)\\b"
+					"name": "keyword.control.cube",
+					"match": "\\b(if|else|do|for|while|return|as|and|break|continue|import|include|require|or|is|in|not|switch|case|default|async|await|abort|suspend|resume|try|catch|throw|pass|assert)\\b"
 				},
 				{
-				"name": "keyword.other.cube",
-				"match": "\\b(let|with|super|this|args)\\b"
+					"name": "keyword.other.cube",
+					"match": "\\b(let|with|super|this|args)\\b"
 				}
 			]
-			},
+		},
 		"comments": {
 			"patterns": [
 				{
-				"name": "comment.line.double-dash.cube",
-				"begin": "//",
-				"end": "\n"
+					"name": "comment.line.double-dash.cube",
+					"begin": "//",
+					"end": "\n"
 				},
 				{
-				"name": "comment.line.shabang.cube",
-				"begin": "#!",
-				"end": "\n"
+					"name": "comment.line.shabang.cube",
+					"begin": "#!",
+					"end": "\n"
 				},
 				{
-				"name":"comment.block.cube",
-				"begin": "\/[*]",
-				"end": "[*](\/)"
+					"name": "comment.block.documentation.cube",
+					"begin": "\/[*](\\?)",
+					"end": "[*](\/)"
+				},
+				{
+					"name": "comment.block.cube",
+					"begin": "\/[*]",
+					"end": "[*](\/)"
 				}
 			]
 		},
-		"strings":{
+		"strings": {
 			"patterns": [
 				{
-				"name":"string.quoted.single.cube",
-				"begin": "'",
-				"end": "'"
+					"name": "string.quoted.single.cube",
+					"begin": "'",
+					"end": "'"
 				},
 				{
-				"name":"string.quoted.double.cube",
-				"begin": "\"",
-				"end": "\""
+					"name": "string.quoted.double.cube",
+					"begin": "\"",
+					"end": "\""
+				},
+				{
+					"name": "string.regexp.cube",
+					"begin": "\\$\\{",
+					"end": "\\}"
 				}
 			]
 		},
-		"variables":{
+		"variables": {
 			"patterns": [
 				{
-				"name": "variable.language.cube"	,
-				"match": "\\b(global|var|void|bool|num|int|str|bytes|list|dict)\\b"
+					"name": "variable.language.cube",
+					"match": "\\b(global|var|void|bool|num|str|bytes|list|dict|cbool|int8|uint8|char|uchar|int16|uint16|short|ushort|int32|uint32|int|uint|int64|uint64|long|ulong|float|float32|double|float64|cstring|cstr|cbytes|char_array|uchar_array|raw|pointer|ptr)\\b"
 				}
 			]
 		},
 		"constants": {
 			"patterns": [
 				{
-				"name": "constant.character",
-				"match": "(@)"
+					"name": "constant.character",
+					"match": "(@)"
 				},
 				{
-				"name": "constant.language",
-				"match": "\\b(none|inf|nan|true|false|class|func|native|static)\\b"
+					"name": "constant.language",
+					"match": "\\b(null|inf|nan|true|false|class|func|enum|native|struct|static|secure)\\b"
 				},
 				{
-				"name": "constant.numeric",
-				"match": "[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?"
+					"name": "constant.numeric",
+					"match": "[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?"
+				}
+			]
+		},
+		"markups": {
+			"patterns": [
+				{
+					"name": "markup.bold.cube",
+					"match": "\\b(cube)\\b"
 				}
 			]
 		}
-
 	},
 	"scopeName": "source.cube"
 }
