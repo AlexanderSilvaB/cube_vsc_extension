@@ -33,7 +33,7 @@
 				},
 				{
 					"name": "keyword.other.cube",
-					"match": "\\b(let|with|super|this|args)\\b"
+					"match": "\\b(let|with|super|this|args|nargs)\\b"
 				}
 			]
 		},
